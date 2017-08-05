@@ -5,6 +5,9 @@ gem 'hanami',       '~> 1.0'
 gem 'hanami-model', '~> 1.0'
 gem 'hanami-events', github: 'hanami/events'
 
+gem 'redis'
+gem 'connection_pool'
+
 gem 'pg'
 
 gem 'slim'
