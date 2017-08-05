@@ -5,11 +5,16 @@ module Interactors
     include Hanami::Interactor
 
     def initialize(payload)
-      @payload = payload
+      @payload = Hanami::Utils::Hash.symbolize(payload)
     end
 
     def call
-      puts "Called UserCreate interactor with: #{@payload.inspect}"
+      puts '*' * 80
+      puts "\tLong calculation"
+      sleep 1
+      user = UserRepository.new.create(@payload)
+      puts "\tNew user: #{user.inspect}"
+      puts '*' * 80
     end
   end
 end

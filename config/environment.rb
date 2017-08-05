@@ -2,10 +2,12 @@ require 'bundler/setup'
 require 'hanami/setup'
 require 'hanami/model'
 require_relative '../lib/event_example'
-require_relative '../apps/web/application'
 
 Hanami.configure do
-  mount Web::Application, at: '/'
+  unless ENV['EVENTS']
+    require_relative '../apps/web/application'
+    mount Web::Application, at: '/'
+  end
 
   model do
     ##

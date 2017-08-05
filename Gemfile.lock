@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/hanami/events.git
-  revision: 86228dae656e842f5c0d92b0b7478a2f09312cbd
+  revision: 8a96cc8d4dbe8365375ab40582cb72de23d85db8
   specs:
     hanami-events (0.0.0)
       dry-container (~> 0.6)
