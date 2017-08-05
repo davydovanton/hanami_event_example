@@ -1,0 +1,4 @@
+project=event_example
+architecture=container
+test=rspec
+template=slim
