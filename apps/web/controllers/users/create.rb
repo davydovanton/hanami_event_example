@@ -3,7 +3,7 @@ module Web::Controllers::Users
     include Web::Action
 
     def call(params)
-      redirect_to routes.users_path
+      redirect_to routes.root_path
     end
   end
 end
