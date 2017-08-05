@@ -3,7 +3,7 @@ module Web::Controllers::Users
     include Web::Action
 
     def call(params)
-      self.body = 'OK'
+      redirect_to routes.users_path
     end
   end
 end

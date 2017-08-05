@@ -1,0 +1,15 @@
+h2 Create User
+
+h2 Users
+.users
+  table
+    tr
+      th ID
+      th Name
+      th Created at
+    - users.each do |user|
+      tr
+        td = user.id
+        td = user.name
+        td = user.created_at
+
