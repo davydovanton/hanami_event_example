@@ -15,6 +15,8 @@ module Interactors
       user = UserRepository.new.create(@payload)
       puts "\tNew user: #{user.inspect}"
       puts '*' * 80
+
+      EVENTS.broadcast('notify.user_created', name: user.name)
     end
   end
 end
