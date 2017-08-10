@@ -1,0 +1,16 @@
+h2 User: #{user.name}
+
+= form
+
+.events
+  h2 Events
+  table
+    tr
+      th ID
+      th Name
+      th Payload
+    - events.each do |event|
+      tr
+        td = event['id']
+        td = event['event_name']
+        td = event['payload']

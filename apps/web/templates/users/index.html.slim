@@ -13,7 +13,7 @@ h2 Create User
       - users.each do |user|
         tr
           td = user.id
-          td = user.name
+          td = link_to user.name, routes.user_path(user.id)
           td = user.created_at
 
   .events
