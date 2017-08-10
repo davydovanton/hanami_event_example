@@ -5,9 +5,8 @@ EVENTS.subscribe('user.created') do |payload|
 end
 
 EVENTS.subscribe('notify.user_created') do |payload|
-
-  require 'debug'
   puts "Send notification to user #{payload['name']}"
+  puts 'DONE'
 end
 
 loop { sleep(100) }
