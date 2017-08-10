@@ -5,3 +5,9 @@ table, th, td {
 th, td {
   padding: 10px;
 }
+
+.container {
+  display: flex;
+
+  justify-content: space-between;
+}

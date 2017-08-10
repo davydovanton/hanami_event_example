@@ -2,16 +2,29 @@ h2 Create User
 
 = form
 
-h2 Users
-.users
-  table
-    tr
-      th ID
-      th Name
-      th Created at
-    - users.each do |user|
+.container
+  .users
+    h2 Users
+    table
       tr
-        td = user.id
-        td = user.name
-        td = user.created_at
+        th ID
+        th Name
+        th Created at
+      - users.each do |user|
+        tr
+          td = user.id
+          td = user.name
+          td = user.created_at
 
+  .events
+    h2 Events
+    table
+      tr
+        th ID
+        th Name
+        th Payload
+      - events.each do |event|
+        tr
+          td = event['id']
+          td = event['event_name']
+          td = event['payload']
