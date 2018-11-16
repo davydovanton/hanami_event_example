@@ -20,4 +20,5 @@ EVENTS.subscribe('notify.user_updated') do |payload|
   puts 'DONE'
 end
 
-loop { sleep(100) }
+runner = Hanami::Events::Runner.new(EVENTS)
+runner.start
